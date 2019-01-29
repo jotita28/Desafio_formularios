@@ -1,0 +1,18 @@
+<div class="container">
+<h5>Ingresa una venta</h5>
+
+<%= form_with model: @sale, local: true do |form| %>
+ <%= form.label :detail %>
+ <%= form.text_area :detail %>
+ <%= form.label :category %>
+ <%= form.text_field :category %>
+ <%= form.label :value %>
+ <%= form.number_field :value %>
+ <%= form.label :discount %>
+ <%= form.number_field :discount %>
+ <%= form.label :tax %>
+ <%= form.check_box :tax, {checked: true} %>
+ <%= form.submit "Crear" %>
+<% end %>
+
+</div>
